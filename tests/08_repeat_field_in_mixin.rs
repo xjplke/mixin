@@ -6,7 +6,7 @@ mod tests {
     }
 
     mod device {
-        use mixin::{declare, insert};
+        use mixinx::{declare, insert};
 
         #[declare]
         #[derive(Debug)]
@@ -25,7 +25,7 @@ mod tests {
     mod ap {
 
         use crate::tests::device::*;
-        use mixin::insert;
+        use mixinx::insert;
 
         #[insert(DevicePersist)]
         #[derive(Debug)]

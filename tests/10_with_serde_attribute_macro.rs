@@ -6,7 +6,7 @@ mod tests {
     }
 
     pub mod device {
-        use mixin::{declare, insert};
+        use mixinx::{declare, insert};
         use serde::{Deserialize, Serialize};
 
         #[declare]
@@ -29,7 +29,7 @@ mod tests {
 
     mod ap {
         use crate::tests::device::*;
-        use mixin::insert;
+        use mixinx::insert;
         use serde::{Deserialize, Serialize};
 
         #[insert(DevicePersist)]

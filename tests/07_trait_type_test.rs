@@ -8,7 +8,7 @@ mod tests {
     }
 
     mod device {
-        use mixin::{declare, expand};
+        use mixinx::{declare, expand};
 
         use super::Handler;
 
@@ -44,14 +44,14 @@ mod tests {
             }
         }
     }
-    //这里有个问题， 如果想覆盖原来的方法怎么半？ 因为这个impl是没有注册，没办法给inset宏观察到的。
+    //这里有个问题， 如果想覆盖原来的方法怎么办？ 因为这个impl是没有注册，没办法给inset宏观察到的。
     //这里添加expand_trait微博能行，因为这个expand_trait的执行是在insert[Device]的后面
     //这个需要编译器自身把上下文也暴露出来，能够被观察到了之后，才能进行相关的处理吧？
     //如果把代码位置放在APDevice前面能，词法分析会先进行吗？->可以的，但是代码的处理流程又不同了。开一个新宏来处理这种情况
 
     mod ap {
         use crate::tests::*;
-        use mixin::{insert, overwrite};
+        use mixinx::{insert, overwrite};
 
         #[overwrite]
         impl Handler<Online> for APDevice {

@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod tests {
 
-    use mixin::{declare, expand, insert, overwrite};
+    use mixinx::{declare, expand, insert, overwrite};
 
     trait Handler<T> {
         fn handle(&self, t: T) -> String;

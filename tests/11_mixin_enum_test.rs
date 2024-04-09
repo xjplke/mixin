@@ -1,6 +1,6 @@
 #[cfg(test)]
 mod tests {
-    use mixin::{declare, expand, insert};
+    use mixinx::{declare, expand, insert};
 
     #[declare]
     #[derive(Clone, Debug)]

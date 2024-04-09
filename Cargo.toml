@@ -1,5 +1,5 @@
 [package]
-name = "mixin"
+name = "mixinx"
 version = "0.1.0"
 edition = "2021"
 description = "base from https://github.com/therustmonk/mixin"
