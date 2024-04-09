@@ -1,0 +1,25 @@
+[package]
+name = "mixin"
+version = "0.1.0"
+edition = "2021"
+description = "base from https://github.com/therustmonk/mixin"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+proc-macro = true
+
+[dependencies]
+anyhow = "1.0"
+once_cell = "1.3"
+proc-macro-hack = "0.5"
+proc-macro2 = "1.0"
+quote = "1.0"
+syn = { version = "2.0", features = [
+    "full",
+] } # 用于解析 TokenStream，使用 extra-traits 可以用于 Debug
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+convert_case = "0.6"
+#caller_modpath = "0.1"
